@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Audio element for key press sound -->
+    <audio id="keySound">
+        <source src="key-sound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="calculator">
+        <input type="text" id="inputBox" class="result" disabled>
+        <div class="buttons">
+            <button class="button operator" onclick="clearInput()">AC</button>
+            <button class="button operator" onclick="deleteChar()">DEL</button>
+            <button class="button operator" onclick="appendToInput('%')">%</button>
+            <button class="button operator" onclick="appendToInput('/')">/</button>
+            <button class="button" onclick="appendToInput('7')">7</button>
+            <button class="button" onclick="appendToInput('8')">8</button>
+            <button class="button" onclick="appendToInput('9')">9</button>
+            <button class="button operator" onclick="appendToInput('*')">*</button>
+            <button class="button" onclick="appendToInput('4')">4</button>
+            <button class="button" onclick="appendToInput('5')">5</button>
+            <button class="button" onclick="appendToInput('6')">6</button>
+            <button class="button operator" onclick="appendToInput('-')">-</button>
+            <button class="button" onclick="appendToInput('1')">1</button>
+            <button class="button" onclick="appendToInput('2')">2</button>
+            <button class="button" onclick="appendToInput('3')">3</button>
+            <button class="button operator" onclick="appendToInput('+')">+</button>
+            <button class="button" onclick="appendToInput('00')">00</button>
+            <button class="button" onclick="appendToInput('0')">0</button>
+            <button class="button" onclick="appendToInput('.')">.</button>
+            <button class="button equalBtn" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
